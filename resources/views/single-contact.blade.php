@@ -12,15 +12,14 @@
     <link rel="stylesheet" href="/main.css" />
 </head>
 <body>
-    <div class="header d-flex flex-row-reverse m-2">
-    <a class="btn btn-success font-weight-bold" href="/add-contact">+</a>
+    <div class="header d-flex m-2">
+        <a class="btn btn-info font-weight-bold" href="/"><</a>
     </div>
 
-    <div class="list-group">
-        @foreach($contacts as $contact)
-        <h1>{{ $contact->name }}</h1>
-        <h2>{{ $contact->phone_number }}</h2>
-        @endforeach
+    <div class='d-flex align-items-center flex-column my-5'>
+    <h1>{{ $contact->name }}</h1>
+    <h3>{{ $contact->phone_number }}</h3>
+    <h3>Created on {{ $contact->created_at->format('d/m/Y') }} </h3>
     </div>
 </body>
 </html>
